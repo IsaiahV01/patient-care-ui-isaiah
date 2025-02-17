@@ -1,19 +1,18 @@
 <script setup>
 import SidebarPanel from '@/components/sidebar/SidebarPanel.vue'
+import { sidebarWidth } from './components/sidebar/sidebarState.js';
 </script>
 
 <template>
   <div class="app-container">
     <SidebarPanel />
-    <div class="main-content">
-      
+    <div class="main-content" :style="{ marginLeft: sidebarWidth }">
       <nav>
         <router-link to="/">Home</router-link> |
         <router-link to="/about">About</router-link>
       </nav>
       <router-view />
     </div>
-
   </div>
 </template>
 
