@@ -12,7 +12,9 @@ export default {
 
 <template>
     <div class="sidebar" :style="{ width: sidebarWidth }">
-        <font-awesome-icon icon="angles-left" @click="toggleSidebar" class="collapse-icons" />
+        <span class="collapse-icon" :class="{ 'rotate-180': collapsed}">
+            <font-awesome-icon icon="angles-left" @click="toggleSidebar" />
+        </span>
     </div>
 </template>
 
@@ -41,5 +43,20 @@ export default {
 
     display: flex;
     flex-direction: column;
+}
+
+.collapse-icon {
+    position: absolute;
+    bottom: 0;
+    padding: 0.75em;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    transition: 0.2s linear;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+    transition: 0.2s linear;
 }
 </style>
