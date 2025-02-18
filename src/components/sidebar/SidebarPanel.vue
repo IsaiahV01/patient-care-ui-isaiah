@@ -1,9 +1,13 @@
 <script>
+import SidebarLink from './SidebarLink.vue';
 import { collapsed, toggleSidebar, sidebarWidth } from '@/components/sidebar/sidebarState';
 
 
 export default {
     props: {},
+    components: {
+        SidebarLink
+    },
     setup() {
         return { collapsed, toggleSidebar, sidebarWidth }
     }
@@ -12,6 +16,19 @@ export default {
 
 <template>
     <div class="sidebar" :style="{ width: sidebarWidth }">
+        <h1>
+            <span v-if="collapsed">
+                <div>N</div>
+                <div>C</div>
+            </span>
+            <span v-else>NeuroCorp</span>   
+        </h1>
+        <SidebarLink to="/" icon="home">Home</SidebarLink>
+        <SidebarLink to="/patients" icon="user">Patients</SidebarLink>
+        <SidebarLink to="/caretakers" icon="hands-holding-child">Caretakers</SidebarLink>
+        <SidebarLink to="/therapists" icon="user-doctor">Therapists</SidebarLink>
+        <SidebarLink to="/appointments" icon="calendar">Appointments</SidebarLink>
+        <SidebarLink to="/payments" icon="file-invoice-dollar">Payments</SidebarLink>
         <span class="collapse-icon" :class="{ 'rotate-180': collapsed}">
             <font-awesome-icon icon="angles-left" @click="toggleSidebar" />
         </span>

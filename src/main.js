@@ -6,13 +6,13 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 // Import specific icons (example: solid icons)
-import { faAnglesLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesLeft, faHome, faUser, faHandsHoldingChild, faUserDoctor, faCalendar, faFileInvoiceDollar } from '@fortawesome/free-solid-svg-icons';
 
 // Import Font Awesome component
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // Add icons to the library
-library.add(faAnglesLeft);
+library.add(faAnglesLeft, faHome, faUser, faHandsHoldingChild, faUserDoctor, faCalendar, faFileInvoiceDollar);
 
 const app = createApp(App);
 
