@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-    <router-link :to="to" :class="['link', { 'router-link-exact-active': isActive }]">
+    <router-link :to="to" :class="['link', { 'router-link-exact-active': isActive, 'active-link': isActive }]">
         <font-awesome-icon class="icon" :icon="icon" />
         <transition name="fade">
         <span v-if="!collapsed">
@@ -67,5 +67,9 @@ export default {
     flex-shrink: 0;
     width: 25px;
     margin-right: 10px;
+}
+
+.active-link {
+    background-color: var(--sidebar-item-active);
 }
 </style>
