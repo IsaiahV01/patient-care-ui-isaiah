@@ -42,7 +42,6 @@ body {
   letter-spacing: 20px;
 }
 
-/* Divider Line */
 .divider {
   width: 85%;
   border: 1px solid white;
@@ -54,6 +53,44 @@ body {
   font-size: 1.5rem;
   letter-spacing: 7px;
   word-spacing: 15px;
+}
+
+@media (max-width: 1024px) {  /* Tablets */
+  .main-container {
+    min-height: calc(100vh - 60px); /* ✅ Adjust for top navbar */
+    padding-top: 60px; /* ✅ Pushes content down */
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .slogan {
+    font-size: 1.2rem;
+    max-width: 30rem;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 768px) {  /* Phones */
+  .main-container {
+    min-height: calc(100vh - 60px); /* ✅ Adjust for top navbar */
+    padding-top: 60px; /* ✅ Pushes content down */
+  }
+  .title {
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+  }
+  .divider {
+    width: 70%;
+  }
+  .slogan {
+    font-size: 1rem;
+    max-width: 22rem;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-wrap: balance;
+  }
 }
 
 @keyframes gradient-animation {

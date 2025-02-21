@@ -2,14 +2,13 @@
 import SidebarLink from './SidebarLink.vue';
 import { collapsed, toggleSidebar, sidebarWidth } from '@/components/sidebar/sidebarState';
 
-
 export default {
     props: {},
     components: {
         SidebarLink
     },
     setup() {
-        return { collapsed, toggleSidebar, sidebarWidth }
+                return { collapsed, toggleSidebar, sidebarWidth }
     }
 }
 </script>
@@ -36,7 +35,7 @@ export default {
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Example Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@100&display=swap'); /* Example Google Font */
 
 :root {
     --sidebar-bg-color: #ffffff;
@@ -45,7 +44,7 @@ export default {
 }
 
 .sidebar h1 {
-    font-family: 'Roboto', sans-serif; /* Apply the Google Font to the sidebar title */
+    font-family: "Montserrat", serif; 
 }
 </style>
 
@@ -82,5 +81,59 @@ export default {
 .rotate-180 {
     transform: rotate(180deg);
     transition: 0.2s linear;
+}
+/* Sidebar responsiveness */
+@media (max-width: 1024px) {  /* Tablets */
+    .sidebar {
+        width: 100%;
+        height: 5vh;
+        position: fixed; /* ✅ Moves sidebar to the top */
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom: #806DF1 1px solid;
+        border-right: none;
+        display: flex;
+        flex-direction: row; /* ✅ Makes items align in a row */
+        align-items: center;
+        padding: 0.5em 1em;
+    }
+
+    .sidebar h1 {
+        flex-grow: 1; /* ✅ Pushes text to the left */
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .sidebar .collapse-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {  /* Phones */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: fixed; /* ✅ Moves sidebar to the top */
+        top: 0;
+        left: 0;
+        right: 0;
+        border-bottom: #806DF1 1px solid;
+        border-right: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5em 1em;
+    }
+
+    .sidebar h1 {
+        flex-grow: 1;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .sidebar .collapse-icon {
+        display: none;
+    }
 }
 </style>

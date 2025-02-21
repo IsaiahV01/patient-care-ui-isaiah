@@ -34,6 +34,8 @@ export default {
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@100&display=swap');
+
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.1s;
 }
@@ -43,6 +45,7 @@ export default {
 }
 
 .link {
+    font-family: "Montserrat", serif bold;
     display: flex;
     align-items: center;
     cursor: pointer;
