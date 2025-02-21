@@ -14,6 +14,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 // Add icons to the library
 library.add(faAnglesLeft, faHome, faUser, faHandsHoldingChild, faUserDoctor, faCalendar, faFileInvoiceDollar);
 
+import './assets/global.css'; // Import the global CSS file
+
 const app = createApp(App);
 
 // Register FontAwesome globally

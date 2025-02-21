@@ -55,12 +55,13 @@ export default {
     border-radius: 0.25em;
     height: 1.5em;
 
-    color: white;
+    color: #806DF1;
     text-decoration: none;
 }
 
 .link:hover {
     background-color: var(--sidebar-item-active);
+    color: white;
 }
 
 .link .icon {
@@ -71,5 +72,6 @@ export default {
 
 .active-link {
     background-color: var(--sidebar-item-active);
+    color: white;
 }
 </style>

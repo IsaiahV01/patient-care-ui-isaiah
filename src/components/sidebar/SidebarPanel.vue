@@ -36,17 +36,24 @@ export default {
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Example Google Font */
+
 :root {
-    --sidebar-bg-color: #2f855a;
-    --sidebar-item-color: #38a169;
-    --sidebar-item-active: #276749;
+    --sidebar-bg-color: #ffffff;
+    --sidebar-item-color: #806DF1;
+    --sidebar-item-active: #806DF1;
+}
+
+.sidebar h1 {
+    font-family: 'Roboto', sans-serif; /* Apply the Google Font to the sidebar title */
 }
 </style>
 
 <style scoped>
 .sidebar {
+    border-right: #806DF1 1px solid;
     background-color: var(--sidebar-bg-color);
-    color: white;
+    color: #806DF1;
     
     float: left;
     position: fixed;
@@ -67,7 +74,7 @@ export default {
     bottom: 0;
     padding: 0.75em;
 
-    color: rgba(255, 255, 255, 0.7);
+    color: #806DF1;
 
     transition: 0.2s linear;
 }
